@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 540" width="340" height="540">
+  <defs>
+    <linearGradient id="icedBodyG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#bda07c" />
+      <stop offset="10%" stop-color="#e8d5b7" />
+      <stop offset="34%" stop-color="#fffaf1" />
+      <stop offset="66%" stop-color="#f0e0c5" />
+      <stop offset="88%" stop-color="#d5bb97" />
+      <stop offset="100%" stop-color="#b0906c" />
+    </linearGradient>
+    <radialGradient id="icedShadG" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#0a0503" stop-opacity=".6" />
+      <stop offset="100%" stop-color="#0a0503" stop-opacity="0" />
+    </radialGradient>
+    <clipPath id="icedInG">
+      <ellipse cx="170" cy="157" rx="111" ry="23" />
+    </clipPath>
+  </defs>
+
+  <ellipse cx="170" cy="508" rx="116" ry="20" fill="url(#icedShadG)" />
+
+  <!-- cream cup -->
+  <path d="M46 156 L92 470 Q95 490 116 490 L224 490 Q245 490 248 470 L294 156 Z" fill="url(#icedBodyG)" />
+  <path d="M46 156 L92 470 Q95 490 116 490 L142 490 L104 156 Z" fill="#ffffff" opacity=".3" />
+  <path d="M294 156 L248 470 Q245 490 224 490 L204 490 L264 156 Z" fill="#8a6a45" opacity=".16" />
+  <rect x="86" y="452" width="168" height="10" rx="5" fill="#c9a87f" opacity=".35" />
+
+  <!-- drink surface -->
+  <ellipse cx="170" cy="156" rx="124" ry="28" fill="#f7ecd8" />
+  <ellipse cx="170" cy="157" rx="112" ry="23" fill="#2a1809" />
+
+  <g clip-path="url(#icedInG)">
+    <ellipse cx="170" cy="157" rx="112" ry="24" fill="#43240f" />
+    <ellipse cx="170" cy="176" rx="112" ry="22" fill="#29140a" />
+    <!-- ice cubes -->
+    <g fill="#e9f7f8" opacity=".45">
+      <rect x="98" y="122" width="56" height="48" rx="13" transform="rotate(-13 126 146)" />
+      <rect x="176" y="128" width="50" height="44" rx="11" transform="rotate(11 201 150)" />
+      <rect x="132" y="152" width="46" height="38" rx="10" transform="rotate(-6 155 171)" opacity=".8" />
+    </g>
+    <g fill="#ffffff" opacity=".55">
+      <rect x="108" y="132" width="26" height="6" rx="3" transform="rotate(-13 121 135)" />
+      <rect x="186" y="138" width="22" height="5" rx="2.5" transform="rotate(11 197 140)" />
+    </g>
+    <!-- milk cascading through the ice -->
+    <path d="M74 152C104 128 158 126 196 140C222 150 248 150 266 142C252 170 204 180 160 176C118 172 88 166 74 152Z" fill="#ead5b2" opacity=".92" />
+    <path d="M104 170C130 156 176 154 206 164C226 170 244 170 258 166C244 184 200 190 164 188C134 186 114 180 104 170Z" fill="#f6e6cd" opacity=".85" />
+    <!-- milk foam cap -->
+    <g fill="#fdf7ec">
+      <circle cx="214" cy="138" r="27" />
+      <circle cx="240" cy="152" r="20" />
+      <circle cx="186" cy="130" r="22" />
+      <circle cx="160" cy="122" r="17" />
+    </g>
+    <g fill="#ffffff" opacity=".5">
+      <circle cx="204" cy="128" r="9" />
+      <circle cx="234" cy="146" r="6" />
+    </g>
+  </g>
+
+  <!-- rim highlight -->
+  <path d="M46 156 A124 28 0 0 0 294 156" fill="none" stroke="#fffdf8" stroke-width="3.5" opacity=".55" />
+  <path d="M58 150 A118 24 0 0 1 132 132" fill="none" stroke="#ffffff" stroke-width="3" opacity=".4" />
+
+  <text x="170" y="404" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="7" fill="#7a5433" opacity=".5">BODRĒN</text>
+  <rect x="108" y="418" width="124" height="2" rx="1" fill="#7a5433" opacity=".3" />
+</svg>

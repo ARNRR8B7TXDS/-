@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 480" width="320" height="480">
+  <defs>
+    <linearGradient id="cupBodyG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2b190f" />
+      <stop offset="14%" stop-color="#4d301e" />
+      <stop offset="40%" stop-color="#3a2316" />
+      <stop offset="74%" stop-color="#251409" />
+      <stop offset="100%" stop-color="#140a05" />
+    </linearGradient>
+    <linearGradient id="lidG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdf7ec" />
+      <stop offset="60%" stop-color="#eddfc7" />
+      <stop offset="100%" stop-color="#cdb492" />
+    </linearGradient>
+    <linearGradient id="sleeveG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0ab6c" />
+      <stop offset="48%" stop-color="#c2873f" />
+      <stop offset="100%" stop-color="#9c6528" />
+    </linearGradient>
+    <radialGradient id="cupShadowG" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#0a0503" stop-opacity=".6" />
+      <stop offset="100%" stop-color="#0a0503" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="160" cy="454" rx="122" ry="22" fill="url(#cupShadowG)" />
+
+  <!-- cup body -->
+  <path d="M50 122 L88 424 Q91 442 110 442 L210 442 Q229 442 232 424 L270 122 Z" fill="url(#cupBodyG)" />
+  <path d="M50 122 L88 424 Q91 442 110 442 L139 442 L97 122 Z" fill="#ffffff" opacity=".05" />
+  <path d="M270 122 L232 424 Q229 442 210 442 L197 442 L247 122 Z" fill="#000000" opacity=".2" />
+  <path d="M52 126 L89 420" fill="none" stroke="#c99a63" stroke-width="2.5" opacity=".28" />
+
+  <!-- lid -->
+  <ellipse cx="160" cy="130" rx="126" ry="21" fill="#c8ae8a" />
+  <rect x="34" y="96" width="252" height="34" fill="url(#lidG)" />
+  <ellipse cx="160" cy="96" rx="126" ry="21" fill="#fdf7ec" />
+  <ellipse cx="160" cy="96" rx="97" ry="15" fill="#f4e9d6" />
+  <ellipse cx="160" cy="96" rx="97" ry="15" fill="none" stroke="#dcc9a8" stroke-width="2" />
+  <ellipse cx="98" cy="88" rx="34" ry="7" fill="#ffffff" opacity=".55" />
+
+  <!-- ribbed sleeve -->
+  <path d="M61 210 L78 345 Q80 353 88 353 L232 353 Q240 353 242 345 L259 210 Z" fill="url(#sleeveG)" />
+  <g stroke="#6d421c" stroke-width="4" opacity=".42" stroke-linecap="round">
+    <path d="M73.4 212 L88.3 350" />
+    <path d="M85.8 212 L98.5 350" />
+    <path d="M98.1 212 L108.8 350" />
+    <path d="M110.5 212 L119 350" />
+    <path d="M122.9 212 L129.3 350" />
+    <path d="M135.3 212 L139.5 350" />
+    <path d="M147.6 212 L149.8 350" />
+    <path d="M160 212 L160 350" />
+    <path d="M172.4 212 L170.3 350" />
+    <path d="M184.8 212 L180.5 350" />
+    <path d="M197.1 212 L190.8 350" />
+    <path d="M209.5 212 L201 350" />
+    <path d="M221.9 212 L211.3 350" />
+    <path d="M234.3 212 L221.5 350" />
+    <path d="M246.6 212 L231.8 350" />
+  </g>
+  <path d="M61 210 L78 345 Q80 353 88 353 L100 353 L80 210 Z" fill="#ffe0b3" opacity=".22" />
+  <path d="M259 210 L242 345 Q240 353 232 353 L222 353 L245 210 Z" fill="#4c2a0c" opacity=".28" />
+
+  <!-- logo medallion -->
+  <circle cx="160" cy="281" r="37" fill="#f8eeda" />
+  <circle cx="160" cy="281" r="32" fill="none" stroke="#c2873f" stroke-width="1.5" opacity=".65" />
+  <text x="160" y="288" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="1.5" fill="#3a2316">BODRĒN</text>
+
+  <!-- lid rim highlight -->
+  <path d="M44 96 A126 21 0 0 1 276 96" fill="none" stroke="#ffffff" stroke-width="3" opacity=".5" />
+</svg>

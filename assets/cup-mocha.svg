@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 320" width="260" height="320">
+  <defs>
+    <linearGradient id="mocBodyG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2b190f" />
+      <stop offset="16%" stop-color="#4d301e" />
+      <stop offset="44%" stop-color="#3a2316" />
+      <stop offset="78%" stop-color="#241309" />
+      <stop offset="100%" stop-color="#130a05" />
+    </linearGradient>
+    <linearGradient id="creamG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffbf2" />
+      <stop offset="60%" stop-color="#f3e4c9" />
+      <stop offset="100%" stop-color="#dcc5a0" />
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="130" cy="300" rx="80" ry="14" fill="#0a0503" opacity=".5" />
+  <path d="M62 100 L76 278 Q78 292 94 292 L166 292 Q182 292 184 278 L198 100 Z" fill="url(#mocBodyG)" />
+  <path d="M62 100 L76 278 Q78 292 94 292 L106 292 L86 100 Z" fill="#ffffff" opacity=".06" />
+  <path d="M198 100 L184 278 Q182 292 166 292 L154 292 L186 100 Z" fill="#000000" opacity=".25" />
+  <ellipse cx="130" cy="100" rx="68" ry="18" fill="#f2e2c4" />
+
+  <!-- whipped cream mound -->
+  <ellipse cx="130" cy="102" rx="56" ry="13" fill="#2c1a0d" />
+  <g fill="url(#creamG)">
+    <circle cx="130" cy="92" r="34" />
+    <circle cx="102" cy="100" r="25" />
+    <circle cx="158" cy="100" r="25" />
+    <circle cx="116" cy="76" r="23" />
+    <circle cx="146" cy="78" r="21" />
+    <circle cx="130" cy="62" r="18" />
+  </g>
+  <g fill="#ffffff" opacity=".45">
+    <circle cx="116" cy="72" r="9" />
+    <circle cx="128" cy="58" r="6" />
+    <circle cx="104" cy="94" r="7" />
+  </g>
+  <ellipse cx="130" cy="104" rx="52" ry="11" fill="#1d1007" opacity=".35" />
+
+  <!-- chocolate drizzle -->
+  <g fill="none" stroke="#3f2211" stroke-width="5" stroke-linecap="round" opacity=".9">
+    <path d="M94 92C104 76 116 96 130 80C144 64 156 92 168 78" />
+    <path d="M104 108C116 94 126 112 138 98C150 84 160 106 170 94" />
+  </g>
+  <g fill="#4a2a12" opacity=".5">
+    <circle cx="112" cy="86" r="2.4" />
+    <circle cx="136" cy="88" r="2" />
+    <circle cx="152" cy="82" r="2.2" />
+    <circle cx="124" cy="70" r="1.8" />
+  </g>
+  <path d="M62 100 A68 18 0 0 0 198 100" fill="none" stroke="#f8ead3" stroke-width="3" opacity=".35" />
+</svg>

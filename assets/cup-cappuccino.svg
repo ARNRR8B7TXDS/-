@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 320" width="260" height="320">
+  <defs>
+    <linearGradient id="capBodyG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c3a67f" />
+      <stop offset="12%" stop-color="#eddcbf" />
+      <stop offset="36%" stop-color="#fffaf0" />
+      <stop offset="70%" stop-color="#efdfc2" />
+      <stop offset="100%" stop-color="#bd9d76" />
+    </linearGradient>
+    <linearGradient id="capBaseG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9a466" />
+      <stop offset="100%" stop-color="#a96f2c" />
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="130" cy="300" rx="80" ry="14" fill="#0a0503" opacity=".45" />
+  <path d="M62 100 L76 278 Q78 292 94 292 L166 292 Q182 292 184 278 L198 100 Z" fill="url(#capBodyG)" />
+  <path d="M74 258 L77 278 Q79 292 94 292 L166 292 Q181 292 183 278 L186 258 Z" fill="url(#capBaseG)" />
+  <path d="M62 100 L76 278 Q78 292 94 292 L106 292 L86 100 Z" fill="#ffffff" opacity=".34" />
+  <path d="M198 100 L184 278 Q182 292 166 292 L154 292 L186 100 Z" fill="#7c5c38" opacity=".18" />
+
+  <ellipse cx="130" cy="100" rx="68" ry="18" fill="#f9f0df" />
+  <ellipse cx="130" cy="101" rx="58" ry="13.5" fill="#e8cda6" />
+  <ellipse cx="130" cy="99" rx="54" ry="12" fill="#f8ead3" />
+  <g fill="none" stroke="#fffaef" stroke-width="3.4" stroke-linecap="round" opacity=".9">
+    <path d="M88 95C104 86 156 86 172 96" />
+    <path d="M96 104C112 111 148 111 164 104" />
+    <path d="M110 91C120 86 142 86 152 92" />
+  </g>
+  <g fill="#6b3f22" opacity=".42">
+    <circle cx="106" cy="96" r="2.4" />
+    <circle cx="122" cy="104" r="2" />
+    <circle cx="140" cy="94" r="2.6" />
+    <circle cx="154" cy="103" r="2.2" />
+    <circle cx="130" cy="90" r="1.8" />
+    <circle cx="164" cy="94" r="1.8" />
+    <circle cx="96" cy="102" r="1.8" />
+  </g>
+  <path d="M62 100 A68 18 0 0 0 198 100" fill="none" stroke="#fffdf8" stroke-width="3" opacity=".5" />
+</svg>
