@@ -1,0 +1,30 @@
+# Base44 sandbox/dev environment for Horizon Properties.
+# Static site (index.html + style.css + script.js) — no build step.
+# The repo is bind-mounted into an nginx container, so every edit is served
+# straight from the cloned source. Refresh the preview after a change.
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "3000:80"
+    volumes:
+      # The whole checkout is served directly, so the bytes on the wire are
+      # always the live source, never a prebuilt bundle. The mount has to be
+      # writable because the sandbox checkout root is mode 700 and nginx's
+      # unprivileged worker user (uid 101) cannot traverse it -> 403. The
+      # startup command below grants traverse permission (idempotent,
+      # re-applied on every boot); nothing else in the container writes here.
+      - ./:/usr/share/nginx/html
+    command:
+      ["sh", "-c", "chmod o+x /usr/share/nginx/html && exec nginx -g 'daemon off;'"]
+    restart: on-failure
+    labels:
+      base44.project: "Horizon Properties"
+      base44.kind: "web"
+      base44.port: "3000"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
