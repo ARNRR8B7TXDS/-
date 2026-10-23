@@ -1,12 +1,12 @@
 /* ==========================================================================
-   BODRĒN — landing page interactions (vanilla JS, no dependencies)
+   BODRĒN — تعاملات صفحه فرود (جاوااسکریپت خالص، بدون وابستگی)
    ========================================================================== */
 (function () {
   'use strict';
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- Navigation: scroll state, mobile panel, active link ---------- */
+  /* ---------- ناوبری: وضعیت اسکرول، پنل موبایل، لینک فعال ---------- */
   var nav = document.getElementById('nav');
   var burger = document.getElementById('burger');
   var navLinks = document.getElementById('navLinks');
@@ -59,7 +59,7 @@
     });
   }
 
-  /* ---------- Scroll reveal ---------- */
+  /* ---------- نمایش تدریجی هنگام اسکرول ---------- */
   var revealItems = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window) || reduced) {
     Array.prototype.forEach.call(revealItems, function (el) {
@@ -81,7 +81,7 @@
     });
   }
 
-  /* ---------- Hero parallax (subtle, pointer only) ---------- */
+  /* ---------- پارالاکس ملایم هیرو (فقط با ماوس) ---------- */
   var heroArt = document.querySelector('.hero__art');
   if (heroArt && !reduced && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     var hero = document.getElementById('hero');
@@ -97,7 +97,7 @@
     });
   }
 
-  /* ---------- Cart ---------- */
+  /* ---------- سبد خرید ---------- */
   var cart = [];
   var cartBtn = document.getElementById('cartBtn');
   var cartPanel = document.getElementById('cartPanel');
@@ -136,7 +136,7 @@
     cartTotal.textContent = total() + ' ₽';
 
     if (!cart.length) {
-      cartList.innerHTML = '<li class="cart-panel__empty">Пока пусто — загляните в меню.</li>';
+      cartList.innerHTML = '<li class="cart-panel__empty">هنوز خالی است — سری به منو بزن.</li>';
       return;
     }
     cartList.innerHTML = cart
@@ -157,7 +157,7 @@
     setTimeout(function () {
       cartCount.classList.remove('is-bump');
     }, 320);
-    showToast(name + ' добавлен в корзину');
+    showToast(name + ' به سبد اضافه شد');
   }
 
   document.addEventListener('click', function (e) {
@@ -181,12 +181,12 @@
   document.getElementById('cartClear').addEventListener('click', function () {
     cart = [];
     renderCart();
-    showToast('Корзина очищена');
+    showToast('سبد خالی شد');
   });
 
   renderCart();
 
-  /* ---------- Full menu toggle ---------- */
+  /* ---------- باز و بسته شدن منوی کامل ---------- */
   var moreBtn = document.getElementById('moreBtn');
   var moreMenu = document.getElementById('moreMenu');
 
@@ -194,67 +194,67 @@
     var open = moreMenu.hidden;
     moreMenu.hidden = !open;
     moreBtn.setAttribute('aria-expanded', String(open));
-    moreBtn.textContent = open ? 'Скрыть меню' : 'Посмотреть меню';
+    moreBtn.textContent = open ? 'بستن منو' : 'مشاهده منو';
   });
 
-  /* ---------- Coffee preference quiz ---------- */
+  /* ---------- کوییز سلیقه‌ی قهوه ---------- */
   var QUESTIONS = [
     {
-      q: 'Как вы обычно пьёте кофе?',
+      q: 'معمولاً چطور قهوه می‌نوشی؟',
       opts: [
-        { t: 'С молоком', w: { latte: 3, cappuccino: 2, raf: 1 } },
-        { t: 'Чёрный, без сахара', w: { espresso: 3, cappuccino: 1 } },
-        { t: 'Люблю десертные ноты', w: { mocha: 3, raf: 2 } }
+        { t: 'با شیر', w: { latte: 3, cappuccino: 2, raf: 1 } },
+        { t: 'سیاه و بی‌شکر', w: { espresso: 3, cappuccino: 1 } },
+        { t: 'دلبسته‌ی نُت‌های دسری', w: { mocha: 3, raf: 2 } }
       ]
     },
     {
-      q: 'Что для вас важнее в чашке?',
+      q: 'در یک فنجان، چه چیزی برایت مهم‌تر است؟',
       opts: [
-        { t: 'Крепость и плотность', w: { espresso: 3, cappuccino: 2 } },
-        { t: 'Мягкость и сливочность', w: { latte: 3, raf: 2 } },
-        { t: 'Насыщенность и сладость', w: { mocha: 3, raf: 1 } }
+        { t: 'قوت و غلظت', w: { espresso: 3, cappuccino: 2 } },
+        { t: 'نرمی و لطافت', w: { latte: 3, raf: 2 } },
+        { t: 'پُر بودن و شیرینی', w: { mocha: 3, raf: 1 } }
       ]
     },
     {
-      q: 'Когда вы пьёте кофе?',
+      q: 'چه وقت قهوه می‌نوشی؟',
       opts: [
-        { t: 'Утром, чтобы проснуться', w: { cappuccino: 2, espresso: 2 } },
-        { t: 'Днём, за работой', w: { iced: 3, latte: 2 } },
-        { t: 'Вечером, для удовольствия', w: { raf: 3, mocha: 2 } }
+        { t: 'صبح، برای بیدار شدن', w: { cappuccino: 2, espresso: 2 } },
+        { t: 'روز، سرِ کار', w: { iced: 3, latte: 2 } },
+        { t: 'شب، برای لذت بردن', w: { raf: 3, mocha: 2 } }
       ]
     }
   ];
 
   var DRINKS = {
     cappuccino: {
-      name: 'Капучино',
+      name: 'کاپوچینو',
       price: 120,
-      text: 'Бархатная молочная пена, двойной эспрессо и зерно средней обжарки — баланс, который любят почти все.'
+      text: 'فوم شیری مخملی، اسپرسوی دوگانه و دانه‌ی برشته‌کاری متوسط — تعادلی که تقریباً همه عاشقش‌اند.'
     },
     latte: {
-      name: 'Латте',
+      name: 'لاته',
       price: 140,
-      text: 'Мягкий и сливочный, с тонкой пенкой и карамельной сладостью — идеален для неспешного утра.'
+      text: 'نرم و خامه‌ای با فوم نازک و شیرینی کاراملی؛ برای صبح‌های بی‌عجله عالی است.'
     },
     mocha: {
-      name: 'Мокка',
+      name: 'موکا',
       price: 140,
-      text: 'Эспрессо с шоколадом и взбитыми сливками: десертный характер и насыщенное послевкусие.'
+      text: 'اسپرسو با شکلات و خامه‌ی زده: حال‌وهوای دسری و پس‌طعمی غلیظ.'
     },
     raf: {
-      name: 'Раф ванильный',
+      name: 'راف وانیلی',
       price: 160,
-      text: 'Сливки, ваниль и эспрессо: самый мягкий напиток меню, согревает и почти не горчит.'
+      text: 'خامه، وانیل و اسپرسو؛ نرم‌ترین نوشیدنی منو که گرم می‌کند و تلخی‌اش کم است.'
     },
     espresso: {
-      name: 'Эспрессо',
+      name: 'اسپرسو',
       price: 90,
-      text: '30 мл характера: плотное тело, ореховая горечь и карамельный финал без молока.'
+      text: '30 میلی‌لیتر شخصیت: بدنه‌ی غلیظ، تلخیِ فندقی و فینالِ کاراملی، بدون شیر.'
     },
     iced: {
-      name: 'Айс-латте',
+      name: 'آیس لاته',
       price: 170,
-      text: 'Холодный эспрессо, молоко и лёд: освежает и держит вкус до последнего глотка.'
+      text: 'اسپرسوی سرد، شیر و یخ: تازه‌کننده است و طعمش تا آخرین جرعه می‌ماند.'
     }
   };
 
@@ -271,7 +271,7 @@
 
   function renderQuestion() {
     var item = QUESTIONS[step];
-    qProgress.textContent = 'Вопрос ' + (step + 1) + ' из ' + QUESTIONS.length;
+    qProgress.textContent = 'پرسش ' + (step + 1) + ' از ' + QUESTIONS.length;
     qList.innerHTML =
       '<li><h3>' +
       item.q +
@@ -323,7 +323,7 @@
 
   renderQuestion();
 
-  /* ---------- Contact form ---------- */
+  /* ---------- فرم تماس ---------- */
   var form = document.getElementById('contactForm');
   var formOk = document.getElementById('formOk');
 
@@ -344,7 +344,7 @@
     formOk.hidden = false;
   });
 
-  /* ---------- Escape closes overlays ---------- */
+  /* ---------- بستن لایه‌ها با Esc ---------- */
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
     closeNav();

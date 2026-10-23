@@ -21,8 +21,8 @@
   --line: rgba(246, 234, 219, 0.12);
   --glass: linear-gradient(160deg, rgba(66, 40, 26, 0.82), rgba(28, 16, 10, 0.9));
   --shadow: 0 30px 60px -34px rgba(0, 0, 0, 0.95);
-  --head: Manrope, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --body: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --head: Vazirmatn, Manrope, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --body: Vazirmatn, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 * {
@@ -77,7 +77,7 @@ button {
 
 .skip {
   position: absolute;
-  left: -999px;
+  inset-inline-start: -999px;
   top: 10px;
   z-index: 90;
   background: var(--cream);
@@ -87,7 +87,7 @@ button {
 }
 
 .skip:focus {
-  left: 12px;
+  inset-inline-start: 12px;
 }
 
 .sr {
@@ -363,7 +363,7 @@ h3 {
 .nav__links a::after {
   content: "";
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   bottom: -7px;
   width: 0;
   height: 1.5px;
@@ -465,7 +465,7 @@ h3 {
 .cart-panel {
   position: absolute;
   top: calc(100% + 12px);
-  right: 0;
+  inset-inline-end: 0;
   width: min(340px, 88vw);
   padding: 22px;
   border: 1px solid var(--line);
@@ -577,8 +577,8 @@ h3 {
 }
 
 .hero__stats li + li {
-  padding-left: 30px;
-  border-left: 1px solid var(--line);
+  padding-inline-start: 30px;
+  border-inline-start: 1px solid var(--line);
 }
 
 .hero__stats b {
@@ -1135,7 +1135,7 @@ h3 {
   font-style: normal;
   font-size: 13px;
   color: var(--muted);
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 
 /* ---------- 10. Contact ---------- */
@@ -1447,7 +1447,7 @@ html:not(.js) .reveal {
   }
 
   .hero__stats li + li {
-    padding-left: 18px;
+    padding-inline-start: 18px;
   }
 
   .nav__bar {
@@ -1471,8 +1471,8 @@ html:not(.js) .reveal {
   }
 
   .hero__stats li + li {
-    border-left: 0;
-    padding-left: 0;
+    border-inline-start: 0;
+    padding-inline-start: 0;
   }
 
   .review figcaption em {
@@ -1484,6 +1484,38 @@ html:not(.js) .reveal {
   .drop--a1 {
     display: none;
   }
+}
+
+/* ---------- RTL (فارسی) ---------- */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4 {
+  line-height: 1.32;
+  letter-spacing: 0;
+}
+
+[dir="rtl"] .hero__title {
+  line-height: 1.28;
+}
+
+/* letter-spacing خط فارسی را از هم می‌شکند — فقط برای متن لاتین می‌ماند */
+[dir="rtl"] .eyebrow,
+[dir="rtl"] .about__tag,
+[dir="rtl"] .quiz__progress,
+[dir="rtl"] .contact__list b,
+[dir="rtl"] .field span,
+[dir="rtl"] .foot h4 {
+  letter-spacing: 0.02em;
+}
+
+[dir="rtl"] .opt:hover {
+  transform: translateX(-5px);
+}
+
+[dir="rtl"] .foot nav a:hover,
+[dir="rtl"] .foot__grid > div:last-child a:hover {
+  transform: translateX(-3px);
 }
 
 @media (prefers-reduced-motion: reduce) {

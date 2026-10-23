@@ -1,19 +1,19 @@
 <!doctype html>
-<html lang="ru">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BODRĒN — спешелти кофе в каждом глотке</title>
+    <title>BODRĒN — قهوه اسپشیالیتی در هر جرعه</title>
     <meta
       name="description"
-      content="BODRĒN — кофейня собственной обжарки: капучино, латте, мокка и свежее зерно. Премиальный кофе, уютная атмосфера и команда профессиональных бариста."
+      content="BODRĒN — کافه با برشته‌کاری اختصاصی: کاپوچینو، لاته، موکا و دانه تازه. قهوه‌ای ممتاز، فضایی دنج و تیمی از باریستاهای حرفه‌ای."
     />
     <meta name="theme-color" content="#1b0f0a" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap"
     />
     <link rel="stylesheet" href="style.css" />
     <script>
@@ -21,82 +21,81 @@
     </script>
   </head>
   <body>
-    <a class="skip" href="#hero">К содержанию</a>
+    <a class="skip" href="#hero">پرش به محتوا</a>
 
-    <!-- ============ NAVIGATION ============ -->
+    <!-- ============ ناوبری ============ -->
     <header class="nav" id="nav">
       <div class="wrap nav__bar">
-        <a class="brand" href="#hero" aria-label="BODRĒN — на главную">
+        <a class="brand" href="#hero" aria-label="BODRĒN — صفحه اصلی">
           <span class="brand__mark" aria-hidden="true">
             <img src="assets/bean.svg" alt="" width="26" height="26" />
           </span>
           <span class="brand__name">BODRĒN<em>specialty coffee</em></span>
         </a>
 
-        <nav class="nav__links" id="navLinks" aria-label="Основная навигация">
-          <a href="#hero">Главная</a>
-          <a href="#menu">Меню</a>
-          <a href="#about">О нас</a>
-          <a href="#reviews">Отзывы</a>
-          <a href="#contact">Контакты</a>
+        <nav class="nav__links" id="navLinks" aria-label="ناوبری اصلی">
+          <a href="#hero">خانه</a>
+          <a href="#menu">منو</a>
+          <a href="#about">درباره ما</a>
+          <a href="#reviews">نظرات</a>
+          <a href="#contact">تماس با ما</a>
         </nav>
 
         <div class="nav__right">
-          <a class="btn btn--turq btn--sm" href="#menu">Заказать кофе</a>
+          <a class="btn btn--turq btn--sm" href="#menu">سفارش قهوه</a>
           <button class="cart" id="cartBtn" type="button" aria-expanded="false" aria-controls="cartPanel">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M6 8h12l-1 12H7L6 8Zm3 0V6a3 3 0 0 1 6 0v2" />
             </svg>
-            <span class="sr">Корзина</span>
+            <span class="sr">سبد خرید</span>
             <span class="cart__count" id="cartCount">0</span>
           </button>
-          <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Открыть меню">
+          <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="باز کردن منو">
             <span></span>
             <span></span>
           </button>
         </div>
 
         <div class="cart-panel" id="cartPanel" hidden>
-          <h3>Ваш заказ</h3>
+          <h3>سفارش شما</h3>
           <ul id="cartList"></ul>
-          <p class="cart-panel__total">Итого: <b id="cartTotal">0 ₽</b></p>
-          <button class="btn btn--ghost btn--sm" id="cartClear" type="button">Очистить</button>
+          <p class="cart-panel__total">جمع کل: <b id="cartTotal">0 ₽</b></p>
+          <button class="btn btn--ghost btn--sm" id="cartClear" type="button">خالی کردن</button>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- ============ HERO ============ -->
+      <!-- ============ هیرو ============ -->
       <section class="hero" id="hero">
         <span class="glow glow--caramel" aria-hidden="true"></span>
         <span class="glow glow--turq" aria-hidden="true"></span>
 
         <div class="wrap hero__grid">
           <div class="hero__copy reveal">
-            <span class="eyebrow">Спешелти кофе · обжарка на месте</span>
+            <span class="eyebrow">قهوه اسپشیالیتی · برشته‌کاری در محل</span>
             <h1 class="hero__title">
-              Открой для себя превосходный вкус <em>в каждом глотке!</em>
+              در هر جرعه، <em>طعمی بی‌نظیر</em> را کشف کن!
             </h1>
             <p class="hero__text">
-              BODRĒN — это зерно, обжаренное небольшими партиями, и напитки, собранные вручную.
-              Плотный эспрессо, отборное молоко и тёплая атмосфера, в которую хочется возвращаться
-              каждый день.
+              BODRĒN یعنی دانه‌هایی که در حجم کم برشته می‌شوند و نوشیدنی‌هایی که با وسواس ساخته
+              می‌شوند. اسپرسوی غلیظ، شیرِ منتخب و فضایی گرم که هر روز دلت می‌خواهد به آن برگردی.
             </p>
             <div class="hero__cta">
-              <a class="btn btn--turq" href="#menu">Выбрать кофе</a>
-              <span class="hero__note">Бесплатная доставка при заказе от 900 ₽</span>
+              <a class="btn btn--turq" href="#menu">انتخاب قهوه</a>
+              <span class="hero__note">ارسال رایگان برای سفارش‌های بالای 900 ₽</span>
             </div>
             <ul class="hero__stats">
-              <li><b>12 лет</b><span>собственной обжарки</span></li>
-              <li><b>40+</b><span>сортов зерна</span></li>
-              <li><b>4.9</b><span>средняя оценка гостей</span></li>
+              <li><b>12 سال</b><span>برشته‌کاری اختصاصی</span></li>
+              <li><b>40+</b><span>نوع دانه قهوه</span></li>
+              <li><b>4.9</b><span>میانگین امتیاز مهمان‌ها</span></li>
             </ul>
           </div>
 
           <div class="hero__art reveal">
             <img class="art art--splash" src="assets/splash.svg" alt="" aria-hidden="true" />
-            <img class="art art--iced" src="assets/cup-iced.svg" alt="Айс-латте в кремовом стакане с молочной пенкой" />
-            <img class="art art--dark" src="assets/cup-dark.svg" alt="Кофе с собой в коричневом стакане BODRĒN с рифлёным холдером" />
+            <img class="art art--iced" src="assets/cup-iced.svg" alt="آیس لاته در لیوان کرمی با فوم شیری" />
+            <img class="art art--dark" src="assets/cup-dark.svg" alt="قهوه بیرون‌بر در لیوان قهوه‌ای BODRĒN با هولدر شیاردار" />
             <img class="bean bean--h1" src="assets/bean.svg" alt="" aria-hidden="true" />
             <img class="bean bean--h2" src="assets/bean.svg" alt="" aria-hidden="true" />
             <img class="bean bean--h3" src="assets/bean.svg" alt="" aria-hidden="true" />
@@ -107,39 +106,39 @@
         </div>
       </section>
 
-      <!-- ============ FEATURED PRODUCTS ============ -->
+      <!-- ============ نوشیدنی‌های شاخص ============ -->
       <section class="sec menu" id="menu">
         <img class="bean bean--m1" src="assets/bean.svg" alt="" aria-hidden="true" />
         <img class="bean bean--m2" src="assets/bean.svg" alt="" aria-hidden="true" />
         <div class="wrap">
           <header class="sec__head reveal">
-            <span class="eyebrow">Меню</span>
-            <h2>Фирменные напитки BODRĒN</h2>
-            <p>Готовим на зерне собственной обжарки: плотное тело, карамельная сладость и мягкая кислотность.</p>
+            <span class="eyebrow">منو</span>
+            <h2>نوشیدنی‌های اختصاصی BODRĒN</h2>
+            <p>با دانه‌ی برشته‌کاری خودمان دم می‌کنیم: بدنه‌ی غلیظ، شیرینی کاراملی و اسیدیته‌ی ملایم.</p>
           </header>
 
           <div class="cards">
             <article class="card reveal">
-              <span class="card__badge">Хит</span>
-              <img class="card__cup" src="assets/cup-cappuccino.svg" alt="Чашка капучино с молочной пенкой" />
-              <h3 class="card__title">Капучино</h3>
-              <p class="card__text">Бархатная молочная пена и двойной эспрессо на зерне средней обжарки.</p>
+              <span class="card__badge">محبوب</span>
+              <img class="card__cup" src="assets/cup-cappuccino.svg" alt="فنجان کاپوچینو با فوم شیری" />
+              <h3 class="card__title">کاپوچینو</h3>
+              <p class="card__text">فوم شیری مخملی و اسپرسوی دوگانه روی دانه‌ی برشته‌کاری متوسط.</p>
               <div class="card__foot">
                 <span class="price">120 ₽</span>
-                <button class="add" type="button" data-name="Капучино" data-price="120" aria-label="Добавить капучино в корзину">
+                <button class="add" type="button" data-name="کاپوچینو" data-price="120" aria-label="افزودن کاپوچینو به سبد خرید">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
                 </button>
               </div>
             </article>
 
             <article class="card reveal">
-              <span class="card__badge card__badge--turq">Новинка</span>
-              <img class="card__cup" src="assets/cup-latte.svg" alt="Чашка латте с рисунком из молока" />
-              <h3 class="card__title">Латте</h3>
-              <p class="card__text">Мягкий и сливочный, с тонкой пенкой и лёгкой карамельной сладостью.</p>
+              <span class="card__badge card__badge--turq">جدید</span>
+              <img class="card__cup" src="assets/cup-latte.svg" alt="فنجان لاته با لاته آرت" />
+              <h3 class="card__title">لاته</h3>
+              <p class="card__text">نرم و خامه‌ای، با فوم نازک و شیرینی کاراملیِ ملایم.</p>
               <div class="card__foot">
                 <span class="price">140 ₽</span>
-                <button class="add" type="button" data-name="Латте" data-price="140" aria-label="Добавить латте в корзину">
+                <button class="add" type="button" data-name="لاته" data-price="140" aria-label="افزودن لاته به سبد خرید">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
                 </button>
               </div>
@@ -147,12 +146,12 @@
 
             <article class="card reveal">
               <span class="card__badge">−10%</span>
-              <img class="card__cup" src="assets/cup-mocha.svg" alt="Чашка мокка со взбитыми сливками" />
-              <h3 class="card__title">Мокка</h3>
-              <p class="card__text">Эспрессо с шоколадом, взбитыми сливками и какао-посыпкой.</p>
+              <img class="card__cup" src="assets/cup-mocha.svg" alt="فنجان موکا با خامه‌ی زده" />
+              <h3 class="card__title">موکا</h3>
+              <p class="card__text">اسپرسو با شکلات، خامه‌ی زده و پودر کاکائو.</p>
               <div class="card__foot">
                 <span class="price">140 ₽</span>
-                <button class="add" type="button" data-name="Мокка" data-price="140" aria-label="Добавить мокка в корзину">
+                <button class="add" type="button" data-name="موکا" data-price="140" aria-label="افزودن موکا به سبد خرید">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
                 </button>
               </div>
@@ -161,30 +160,30 @@
 
           <p class="menu__more reveal">
             <button class="link-btn" id="moreBtn" type="button" aria-expanded="false" aria-controls="moreMenu">
-              Посмотреть меню
+              مشاهده منو
             </button>
           </p>
 
           <div class="more-menu" id="moreMenu" hidden>
             <ul>
-              <li><span>Раф ванильный</span><b>160 ₽</b></li>
-              <li><span>Флэт уайт</span><b>150 ₽</b></li>
-              <li><span>Эспрессо</span><b>90 ₽</b></li>
-              <li><span>Айс-латте</span><b>170 ₽</b></li>
+              <li><span>راف وانیلی</span><b>160 ₽</b></li>
+              <li><span>فلت وایت</span><b>150 ₽</b></li>
+              <li><span>اسپرسو</span><b>90 ₽</b></li>
+              <li><span>آیس لاته</span><b>170 ₽</b></li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- ============ ABOUT ============ -->
+      <!-- ============ درباره برند ============ -->
       <section class="sec about" id="about">
         <img class="bean bean--a1" src="assets/bean.svg" alt="" aria-hidden="true" />
         <img class="bean bean--a2" src="assets/bean.svg" alt="" aria-hidden="true" />
         <img class="drop drop--a1" src="assets/drop.svg" alt="" aria-hidden="true" />
         <div class="wrap">
           <header class="sec__head reveal">
-            <span class="eyebrow">О бренде</span>
-            <h2>BODRĒN это</h2>
+            <span class="eyebrow">درباره برند</span>
+            <h2>BODRĒN یعنی</h2>
           </header>
 
           <div class="about__grid">
@@ -193,22 +192,22 @@
                 <span class="about__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M12 3c4 3 7 6 7 10a7 7 0 0 1-14 0c0-4 3-7 7-10Zm0 5v10" /></svg>
                 </span>
-                <h3>Высокое качество зерен</h3>
-                <p>Работаем только с микролотами, которые отбираем сами на слепых дегустациях.</p>
+                <h3>کیفیت بالای دانه‌ها</h3>
+                <p>فقط با میکرولات‌ها کار می‌کنیم که خودمان در چشیدنیِ کور انتخابشان کرده‌ایم.</p>
               </div>
               <div class="about__block reveal">
                 <span class="about__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-8 8a8 8 0 0 1 16 0" /></svg>
                 </span>
-                <h3>Индивидуальный подход к каждому гостю</h3>
-                <p>Помним ваш любимый напиток и подбираем зерно под ваш вкус.</p>
+                <h3>رویکرد شخصی به هر مهمان</h3>
+                <p>نوشیدنی محبوب‌ات را به یاد می‌آوریم و دانه را با ذائقه‌ات هماهنگ می‌کنیم.</p>
               </div>
             </div>
 
             <div class="about__art reveal">
-              <img src="assets/pack.svg" alt="Упаковка кофе BODRĒN с логотипом бренда" />
-              <span class="about__tag">Обжарка небольшими партиями</span>
-              <a class="btn btn--turq" href="#menu">Заказать</a>
+              <img src="assets/pack.svg" alt="بسته‌بندی قهوه BODRĒN با لوگوی برند" />
+              <span class="about__tag">برشته‌کاری در حجم کم</span>
+              <a class="btn btn--turq" href="#menu">سفارش</a>
             </div>
 
             <div class="about__col">
@@ -216,35 +215,35 @@
                 <span class="about__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-9Zm6 10v-6h6v6" /></svg>
                 </span>
-                <h3>Атмосфера вдохновения и уюта</h3>
-                <p>Тёплый свет, дерево, винил и место, где хочется задержаться подольше.</p>
+                <h3>فضای الهام‌بخش و دنج</h3>
+                <p>نور گرم، چوب، صفحه‌ی وینیل و جایی که دلت می‌خواهد بیشتر بمانی.</p>
               </div>
               <div class="about__block reveal">
                 <span class="about__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M6 3h12l-1 12a5 5 0 0 1-10 0L6 3Zm3 18h6" /></svg>
                 </span>
-                <h3>Профессиональная команда бариста</h3>
-                <p>Призёры городских чемпионатов и просто люди, влюблённые в кофе.</p>
+                <h3>تیم حرفه‌ای باریستاها</h3>
+                <p>برندگان مسابقه‌های شهری و آدم‌هایی که عاشق قهوه‌اند.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ============ QUIZ ============ -->
+      <!-- ============ کوییز ============ -->
       <section class="sec quiz" id="quiz">
         <div class="wrap">
           <div class="quiz__card reveal">
             <span class="glow glow--turq glow--in-card" aria-hidden="true"></span>
             <header class="quiz__head">
-              <span class="eyebrow">Квиз</span>
-              <h2>Узнай какой кофе подходит тебе</h2>
-              <p>Три коротких вопроса — и мы подберём напиток под ваш вкус.</p>
+              <span class="eyebrow">کوییز</span>
+              <h2>بفهم چه قهوه‌ای به تو می‌خورد</h2>
+              <p>سه پرسش کوتاه — و ما نوشیدنی مناسب ذائقه‌ات را پیشنهاد می‌کنیم.</p>
             </header>
 
             <div class="quiz__body" id="quizBody">
               <ol class="q" id="qList"></ol>
-              <p class="quiz__progress"><span id="qProgress">Вопрос 1 из 3</span></p>
+              <p class="quiz__progress"><span id="qProgress">پرسش 1 از 3</span></p>
             </div>
 
             <div class="quiz__result" id="quizResult" hidden>
@@ -252,101 +251,101 @@
               <p id="resText"></p>
               <div class="quiz__res-foot">
                 <span class="price" id="resPrice"></span>
-                <button class="btn btn--turq btn--sm" type="button" id="resAdd">Добавить в корзину</button>
+                <button class="btn btn--turq btn--sm" type="button" id="resAdd">افزودن به سبد</button>
               </div>
-              <button class="link-btn" type="button" id="quizRestart">Пройти ещё раз</button>
+              <button class="link-btn" type="button" id="quizRestart">دوباره امتحان کن</button>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ============ REVIEWS ============ -->
+      <!-- ============ نظرات ============ -->
       <section class="sec reviews" id="reviews">
         <div class="wrap">
           <header class="sec__head reveal">
-            <span class="eyebrow">Отзывы</span>
-            <h2>Что говорят наши гости</h2>
+            <span class="eyebrow">نظرات</span>
+            <h2>مهمان‌های ما چه می‌گویند</h2>
           </header>
           <div class="reviews__grid">
             <figure class="review reveal">
-              <span class="review__stars" aria-label="5 из 5">★★★★★</span>
-              <blockquote>Лучший флэт уайт в городе. Зерно всегда свежее, а бариста помнят мой заказ с первого раза.</blockquote>
+              <span class="review__stars" aria-label="5 از 5">★★★★★</span>
+              <blockquote>بهترین فلت وایت شهر. دانه‌ها همیشه تازه‌اند و باریستاها سفارش مرا از همان بار اول به یاد دارند.</blockquote>
               <figcaption>
-                <span class="review__ava" aria-hidden="true">А</span>
-                <b>Анна К.</b>
-                <em>гостья с 2021 года</em>
+                <span class="review__ava" aria-hidden="true">آ</span>
+                <b>آنا ک.</b>
+                <em>مهمان از 2021</em>
               </figcaption>
             </figure>
             <figure class="review reveal">
-              <span class="review__stars" aria-label="5 из 5">★★★★★</span>
-              <blockquote>Атмосфера — отдельная любовь: тёплый свет, дерево и запах свежей обжарки по утрам.</blockquote>
+              <span class="review__stars" aria-label="5 از 5">★★★★★</span>
+              <blockquote>فضا یک دلیل جداگانه برای آمدن است: نور گرم، چوب و بوی برشته‌کاریِ صبحگاهی.</blockquote>
               <figcaption>
-                <span class="review__ava" aria-hidden="true">Д</span>
-                <b>Дмитрий Л.</b>
-                <em>работает рядом</em>
+                <span class="review__ava" aria-hidden="true">د</span>
+                <b>دمیتری ل.</b>
+                <em>از همان خیابان</em>
               </figcaption>
             </figure>
             <figure class="review reveal">
-              <span class="review__stars" aria-label="5 из 5">★★★★★</span>
-              <blockquote>Заказываю зерно домой каждые две недели. Вкус стабильный, как в кофейне у окна.</blockquote>
+              <span class="review__stars" aria-label="5 از 5">★★★★★</span>
+              <blockquote>هر دو هفته یک‌بار دانه برای خانه سفارش می‌دهم. طعمش ثابت است، مثل قهوه‌ای که کنار پنجره می‌نوشی.</blockquote>
               <figcaption>
-                <span class="review__ava" aria-hidden="true">М</span>
-                <b>Мария С.</b>
-                <em>любит фильтр-кофе</em>
+                <span class="review__ava" aria-hidden="true">م</span>
+                <b>ماریا س.</b>
+                <em>عاشق قهوه‌ی دمی</em>
               </figcaption>
             </figure>
           </div>
         </div>
       </section>
 
-      <!-- ============ CONTACT ============ -->
+      <!-- ============ تماس ============ -->
       <section class="sec contact" id="contact">
         <div class="wrap contact__grid">
           <div class="contact__info reveal">
-            <span class="eyebrow">Контакты</span>
-            <h2>Приходите в кофейню</h2>
+            <span class="eyebrow">تماس با ما</span>
+            <h2>به کافه‌ی ما سر بزنید</h2>
             <ul class="contact__list">
               <li>
-                <b>Адрес</b>
-                <span>Москва, Большая Никитская, 12</span>
+                <b>آدرس</b>
+                <span>مسکو، بولشایا نیکیتسکایا، 12</span>
               </li>
               <li>
-                <b>Часы работы</b>
-                <span>Пн–Пт 8:00–22:00 · Сб–Вс 9:00–23:00</span>
+                <b>ساعات کاری</b>
+                <span>دوشنبه–جمعه 8:00–22:00 · شنبه–یکشنبه 9:00–23:00</span>
               </li>
               <li>
-                <b>Телефон</b>
-                <a href="tel:+74952467890">+7 (495) 246-78-90</a>
+                <b>تلفن</b>
+                <a href="tel:+74952467890" dir="ltr">+7 (495) 246-78-90</a>
               </li>
               <li>
-                <b>Почта</b>
-                <a href="mailto:hello@bodren.coffee">hello@bodren.coffee</a>
+                <b>ایمیل</b>
+                <a href="mailto:hello@bodren.coffee" dir="ltr">hello@bodren.coffee</a>
               </li>
             </ul>
           </div>
 
           <form class="contact__form reveal" id="contactForm" novalidate>
-            <h3>Оставить заявку на зерно</h3>
+            <h3>درخواست دانه‌ی قهوه</h3>
             <label class="field">
-              <span>Имя</span>
-              <input type="text" name="name" required placeholder="Как к вам обращаться" />
+              <span>نام</span>
+              <input type="text" name="name" required placeholder="نام شما" />
             </label>
             <label class="field">
-              <span>Телефон или почта</span>
-              <input type="text" name="contact" required placeholder="+7 ___ ___-__-__" />
+              <span>تلفن یا ایمیل</span>
+              <input type="text" name="contact" required dir="ltr" placeholder="+7 ___ ___-__-__" />
             </label>
             <label class="field">
-              <span>Комментарий</span>
-              <textarea name="message" rows="3" placeholder="Например: нужен фильтр на 250 г"></textarea>
+              <span>توضیحات</span>
+              <textarea name="message" rows="3" placeholder="مثلاً: 250 گرم قهوه‌ی دمی می‌خواهم"></textarea>
             </label>
-            <button class="btn btn--turq" type="submit">Отправить</button>
-            <p class="contact__ok" id="formOk" hidden>Спасибо! Мы свяжемся с вами в течение дня.</p>
+            <button class="btn btn--turq" type="submit">ارسال</button>
+            <p class="contact__ok" id="formOk" hidden>سپاس! در طول همین روز با شما تماس می‌گیریم.</p>
           </form>
         </div>
       </section>
     </main>
 
-    <!-- ============ FOOTER ============ -->
+    <!-- ============ فوتر ============ -->
     <footer class="foot">
       <div class="wrap foot__grid">
         <div>
@@ -356,28 +355,28 @@
             </span>
             <span class="brand__name">BODRĒN<em>specialty coffee</em></span>
           </a>
-          <p>Обжариваем, варим и наливаем кофе, за который хочется вернуться. Москва, с 2014 года.</p>
+          <p>قهوه را برشته می‌کنیم، دم می‌کنیم و جلوی شما می‌گذاریم؛ قهوه‌ای که دل می‌خواهد برگردی. مسکو، از سال 2014.</p>
         </div>
-        <nav aria-label="Меню сайта">
-          <h4>Разделы</h4>
-          <a href="#hero">Главная</a>
-          <a href="#menu">Меню</a>
-          <a href="#about">О нас</a>
-          <a href="#reviews">Отзывы</a>
-          <a href="#contact">Контакты</a>
+        <nav aria-label="منوی سایت">
+          <h4>بخش‌ها</h4>
+          <a href="#hero">خانه</a>
+          <a href="#menu">منو</a>
+          <a href="#about">درباره ما</a>
+          <a href="#reviews">نظرات</a>
+          <a href="#contact">تماس با ما</a>
         </nav>
         <div>
-          <h4>Мы рядом</h4>
-          <a href="tel:+74952467890">+7 (495) 246-78-90</a>
-          <a href="mailto:hello@bodren.coffee">hello@bodren.coffee</a>
+          <h4>در دسترس</h4>
+          <a href="tel:+74952467890" dir="ltr">+7 (495) 246-78-90</a>
+          <a href="mailto:hello@bodren.coffee" dir="ltr">hello@bodren.coffee</a>
           <div class="soc">
-            <a href="#contact">Телеграм</a>
-            <a href="#contact">ВКонтакте</a>
-            <a href="#contact">Инстаграм</a>
+            <a href="#contact">تلگرام</a>
+            <a href="#contact">واتس‌اپ</a>
+            <a href="#contact">اینستاگرام</a>
           </div>
         </div>
       </div>
-      <div class="wrap foot__copy">© 2026 BODRĒN. Все права защищены.</div>
+      <div class="wrap foot__copy">© 2026 BODRĒN. همه‌ی حقوق محفوظ است.</div>
     </footer>
 
     <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
